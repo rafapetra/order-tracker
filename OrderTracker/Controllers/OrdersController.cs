@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ForSale.Models;
+using OrderTracker.Models;
 using System.Collections.Generic;
 
 namespace ForSale.Controllers
@@ -9,11 +9,11 @@ namespace ForSale.Controllers
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
-      vendorId vendor = Vendor.Find(vendorId);
+      Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     }
 
-    [HttpGet("/cendors/{vendorId}/orders/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.Find(orderId);

@@ -1,0 +1,18 @@
+@using OrderTracker.Models;
+
+@* @model Dictionary<string, object> *@
+
+@{
+  Layout = "_layout";
+}
+
+<h1>Here are all the Orders within this Vendor</h1>
+
+<ul>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+</ul>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Make a new order</a></p>

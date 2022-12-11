@@ -1,0 +1,24 @@
+@using OrderTracker.Models;
+
+@{
+  Layout = "_layout";
+}
+
+<h1>Vendors</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>There are no vendors</h3>
+}
+
+@foreach (Vendor vendor in Model)
+{
+  <div>
+    <li><a href="/vendors/@vendor.Id">@vendor.Name</a></li>
+    @* <li>@vendor.Description</li>
+      <li>@vendor.Contact</li>
+      <li>@vendor.Id</li> *@
+  </div>
+}
+
+<a href="/vendors/new">Add a bakery vendor</a>

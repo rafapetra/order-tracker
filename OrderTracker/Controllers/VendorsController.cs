@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ForSale.Models;
+using OrderTracker.Models;
 using System.Collections.Generic;
 
-namespace OrderTracker.Controllers
+namespace ForSale.Controllers
 {
   public class VendorsController : Controller
   {
@@ -20,9 +20,9 @@ namespace OrderTracker.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string name, string description)
+    public ActionResult Create(string name, string vendordescription)
     {
-      Vendor newVendor = new Vendor(name, description);
+      Vendor newVendor = new Vendor(name, vendordescription);
       return RedirectToAction("Index");
     }
 
@@ -41,7 +41,7 @@ namespace OrderTracker.Controllers
     public ActionResult Create(int vendorId, string title, string description, int price, string date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      VendorsController myVendor = Vendor.Find(vendorId);
+      Vendor myVendor = Vendor.Find(vendorId);
       Order myOrder = new Order(title, description, price, date);
       myVendor.AddOrder(myOrder);
       List<Order> vendorOrders = myVendor.Orders;
@@ -49,7 +49,9 @@ namespace OrderTracker.Controllers
       model.Add("vendor", myVendor);
       return View("Show", model);
     }
+
   }
+
 }
 
 
