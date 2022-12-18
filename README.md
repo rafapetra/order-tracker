@@ -1,30 +1,33 @@
-# (Bakery Project)
-
-#### (A C# program for a bakery that allows the owner to create a database of his vendors and their orders. )
-
-
-#### By (Rafael Petrachini)
+# Bakery Project
+#### By Rafael Petrachini
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* C#
+* .NET
+* Object Oriented Programming
+* MSTest
 
 ## Description
 
+#### A C# program for a bakery that allows the owner to create a database of his vendors and their orders. 
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+C# and .NET needs to be installed for this project to work. 
+* Download this repository by clicking the "Clone or Download" button
+* Navigate to the folder where it downloaded
+* Now open your terminal and navigate to OrderTracker.Solution > OrderTracker.Tests
+* Type in dotnet restore to download necessary packages
+* Navigate to OrderTracker.Solution > OrderTracker
+* Then type in dotnet run to run the application
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* n/a
 
 ## License
+
+This repository is licensed under the MIT license.
+
+Copyright (c) 2022 by Rafael Petrachini
